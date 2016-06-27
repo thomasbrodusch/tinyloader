@@ -40,6 +40,10 @@
     "es6",
     "tinyloader"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tom4dev/tinyloader.git"
+  },
   "homepage": "https://github.com/tom4dev/tinyloader#readme",
   "bugs": {
     "url": "https://github.com/tom4dev/tinyloader/issues"
