@@ -2,7 +2,10 @@
 
 Tinyloader
 ------------
+###### Version 1.0.0
 **A tiny script loader (~3KB) using async and ES6 Promises**
+
+
 
 ### Installation
     npm install --save tinyloader
@@ -47,14 +50,6 @@ tinyloader.load(myScripts, 'async', function(){
 ```
 
 ### et voilà ! 
-
-
-
-# TinyLoader
-###### Version 1.0.0
-
-A tiny script loader **(~3KB)** using *async* and *ES6 Promises*.
-
 
 
 ### Development
