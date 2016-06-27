@@ -1,6 +1,10 @@
 /**
- * TinyloadJS
- * Script loader using async and ES6 Promises :)
+ * TinyloaderJS
+ * author: Thomas Brodusch
+ * license: MIT
+ * version: 1.0.0
+ * ##########################
+ * Script loader using async and ES6 Promises 
  * @param  string or Array  url     Can be a string or en array of URLs (of course you can chain your script loading)
  * @param  string           mode    'async' or 'defer'
  * @return Promise    

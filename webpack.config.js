@@ -5,11 +5,11 @@ var webpack = require("webpack");
 
 module.exports = {
 
-	entry: ['./src/tinyload.js'],
+	entry: ['./src/tinyloader.js'],
 	output: {
     path        : __dirname + '/dist',
-    filename    : 'tinyload.min.js',
-    library     : 'tinyload',
+    filename    : 'tinyloader.min.js',
+    library     : 'tinyloader',
     libraryTarget : 'umd',
     umdNamedDefine : true
   },

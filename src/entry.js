@@ -1,2 +1,2 @@
 'use strict'
-export tinyload = require('./tinyload');
+module.exports = require('./tinyload');

@@ -8,26 +8,26 @@ var urlsArray = [
   _jQuery
 ];
 // Load jQuery in async mode.
-tinyload.load(_jQuery, 'async', function(_CELA){
+tinyloader.load(_jQuery, 'async', function(_CELA){
   console.log(_CELA);
     console.log('jQuery is loaded w/ success ! ', $);
   });
 
   
 // Load ThreeJS in defer mode, load is performed only if not alreaydy loaded on the current page.
-tinyload.load(_threeJS, 'defer', function(){
+tinyloader.load(_threeJS, 'defer', function(){
   console.log('threeJS is loaded w/ success ! ', THREE);
 });
 
 // You can pass an array of url, TinyLoad will do the rest !
-tinyload.load(urlsArray, 'async', function(){
+tinyloader.load(urlsArray, 'async', function(){
   console.log('All the scripts are loaded w/ success !')
 });
 
 
 // Another try
 setTimeout(function(){
-  tinyload.load(_jQuery,'defer',function(){
+  tinyloader.load(_jQuery,'defer',function(){
     console.log($);
   })
 }, 2000);

@@ -1,8 +1,15 @@
 {
-  "name": "script-loader",
+  "name": "tinyloader",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/tinyload.js",
+  "description": "A tiny script loader (~3KB) using async and ES6 Promises",
+  "author": "Thomas Brodusch <tom4dev@users.noreply.github.com",
+  "contributors": [
+    {
+      "name": "Thomas Brodusch",
+      "email": "tom4dev@users.noreply.github.com"
+    }
+  ],
+  "main": "dist/tinyloader.js",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.10.4",
@@ -19,7 +26,24 @@
     "watch": "webpack -w",
     "prePublish": "webpack -p"
   },
-  "author": "",
+  "keywords": [
+    "tiny",
+    "loader",
+    "load",
+    "script",
+    "require",
+    "requirejs",
+    "systemjs",
+    "script loader",
+    "async",
+    "promise",
+    "es6",
+    "tinyloader"
+  ],
+  "homepage": "https://github.com/tom4dev/tinyloader#readme",
+  "bugs": {
+    "url": "https://github.com/tom4dev/tinyloader/issues"
+  },
   "license": "ISC",
   "tonicExampleFilename": "example/example.js"
 }
