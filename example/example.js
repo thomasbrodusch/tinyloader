@@ -7,29 +7,46 @@ var urlsArray = [
   'https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js',
   _jQuery
 ];
+
+
+
 // Load jQuery in async mode.
-tinyloader.load(_jQuery, 'async', function(_CELA){
-  console.log(_CELA);
-    console.log('jQuery is loaded w/ success ! ', $);
+tinyloader.load(_jQuery,'async')
+  .then( function(val){
+    // Here the code if the load succeed.
+    console.log('jQuery is loaded with success!');
+  }, function(reason){
+    // HEre the code if the load failed.
+    console.log('Load Failed');
+    console.log(reason);
   });
 
+
+
   
-// Load ThreeJS in defer mode, load is performed only if not alreaydy loaded on the current page.
-tinyloader.load(_threeJS, 'defer', function(){
-  console.log('threeJS is loaded w/ success ! ', THREE);
-});
+// Load ThreeJS in defer mode.
+tinyloader.load(_threeJS,'defer')
+  .then( function(){
+    // Here the code if the load succeed.
+    console.log('threeJS is loaded with successs!');
+    console.log(THREE);
+  });
+
 
 // You can pass an array of url, TinyLoad will do the rest !
-tinyloader.load(urlsArray, 'async', function(){
-  console.log('All the scripts are loaded w/ success !')
-});
+tinyloader.load(urlsArray,'async')
+  .then( function(){
+    // Here the code if the load succeed.
+    console.log('All scripts are loaded with success !');
+  }, function(fail){
+    console.log('At least one script failed, there it is: ', fail.script);
+    console.log('Want to see the error: ', fail.error);
+  });
 
 
-// Another try
+// Another try without then()
 setTimeout(function(){
-  tinyloader.load(_jQuery,'defer',function(){
-    console.log($);
-  })
+  tinyloader.load(_jQuery,'async');
 }, 2000);
     
 
