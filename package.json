@@ -1,6 +1,6 @@
 {
   "name": "tinyloader",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A tiny script loader (~3KB) using async and ES6 Promises",
   "author": "Thomas Brodusch <tom4dev@users.noreply.github.com",
   "contributors": [
@@ -40,6 +40,10 @@
     "es6",
     "tinyloader"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tom4dev/tinyloader.git"
+  },
   "homepage": "https://github.com/tom4dev/tinyloader#readme",
   "bugs": {
     "url": "https://github.com/tom4dev/tinyloader/issues"
