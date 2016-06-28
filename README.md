@@ -36,10 +36,10 @@ tinyloader.load(url, mode)
 
 ### Example (see example/example.js for more info)
 ```javascript
-tinyloader.load(_jQuery,'async')
+tinyloader.load('https://code.jquery.com/jquery-3.0.0.min.js','async')
   .then( function(){
     // Here the code if the load succeed.
-    console.log('jQuery is loaded with successs!');
+    console.log('jQuery is loaded with successs!', $);
   }, function(fail){
     // Here the code if the load failed.
     console.log('Load Failed');
