@@ -1,8 +1,11 @@
 
+
 Tinyloader
 ------------
 ###### Version 1.1.0
 **A tiny script loader (~3KB) using async and ES6 Promises**
+
+
 
 ### Installation
     npm install --save tinyloader
@@ -20,11 +23,16 @@ var tinyloader = require('node_modules/tinyloader/dist/tinyloader.min.js');
 
 ### Use Tinyloader
 ```javascript
-tinyloader.load(url, mode, callback);
+tinyloader.load(url, mode)
+	.then( function(){
+		// If load success.
+	}, function(fail){
+		// If load failed.
+	});
 ```
 * url: **String** or **Array**
 * mode: **String** *'async'* or *'defer'* (default: *'async'*)
-* callback: (*optional*)
+* fail: **Object** { script: **String** url_failed, error: **Error Object** e}
 
 ### Example (see example/example.js for more info)
 ```javascript
@@ -63,8 +71,6 @@ tinyloader.load(myScripts,'async')
 ### et voilà ! 
 
 
-
-
 ### Development
 ___
 Want to contribute? Great!
@@ -101,7 +107,3 @@ MIT
 
 
 **Open source, Hell Yeah.**
-
-
-
- 
