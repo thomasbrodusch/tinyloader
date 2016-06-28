@@ -23,11 +23,16 @@ var tinyloader = require('node_modules/tinyloader/dist/tinyloader.min.js');
 
 ### Use Tinyloader
 ```javascript
-tinyloader.load(url, mode, callback);
+tinyloader.load(url, mode)
+	.then( function(){
+		// If load success.
+	}, function(fail){
+		// If load failed.
+	});
 ```
 * url: **String** or **Array**
 * mode: **String** *'async'* or *'defer'* (default: *'async'*)
-* callback: (*optional*)
+* fail: **Object** { script: **String** url_failed, error: **Error Object** e}
 
 ### Example (see example/example.js for more info)
 ```javascript
