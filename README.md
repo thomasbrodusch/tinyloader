@@ -1,6 +1,7 @@
 
 Tinyloader
 ------------
+###### Version 1.1.0
 **A tiny script loader (~3KB) using async and ES6 Promises**
 
 ### Installation
@@ -12,9 +13,9 @@ Tinyloader
 <script src="node_modules/tinyloader/dist/tinyloader.min.js"></script>
 ```
 
-### or ES6 import in your project
+### or import in your project
 ```javascript
-import tinyloader from 'node_modules/dist/tinyloader.min.js';
+var tinyloader = require('node_modules/tinyloader/dist/tinyloader.min.js');
 ```
 
 ### Use Tinyloader
@@ -27,9 +28,17 @@ tinyloader.load(url, mode, callback);
 
 ### Example (see example/example.js for more info)
 ```javascript
-tinyloader.load('https://code.jquery.com/jquery-3.0.0.min.js', 'async', function(){
-    console.log('jQuery is loaded !', $);
-};
+tinyloader.load(_jQuery,'async')
+  .then( function(){
+    // Here the code if the load succeed.
+    console.log('jQuery is loaded with successs!');
+  }, function(fail){
+    // Here the code if the load failed.
+    console.log('Load Failed');
+
+    // Want to see the error and the script in error ?
+    console.log('Inspect : ', fail);
+  });
 ```
 
 With an array
@@ -40,19 +49,19 @@ let myScripts = [
     'https://cdnjs.cloudflare.com/ajax/libs/three.js/r58/three.js'
 ];
 
-tinyloader.load(myScripts, 'async', function(){
-    console.log('All of my scripts are loaded with success !');
-};
+
+tinyloader.load(myScripts,'async')
+  .then( function(){
+    // Here the code if the load succeed.
+    console.log('All scripts are loaded with success !');
+  }, function(fail){
+    console.log('At least one script failed, there it is: ', fail.script);
+    console.log('Want to see the error: ', fail.error);
+  });
 ```
 
 ### et voilà ! 
 
-
-
-# TinyLoader
-###### Version 1.0.0
-
-A tiny script loader **(~3KB)** using *async* and *ES6 Promises*.
 
 
 
@@ -60,7 +69,7 @@ A tiny script loader **(~3KB)** using *async* and *ES6 Promises*.
 ___
 Want to contribute? Great!
 
-Nowtify uses [Webpack](https://webpack.github.io/docs/) for fast developing.
+TinyLoader uses [Webpack](https://webpack.github.io/docs/) for fast developing.
 Make a change in your file and instantanously see your updates!
 
 Open your favorite Terminal and run these commands.
